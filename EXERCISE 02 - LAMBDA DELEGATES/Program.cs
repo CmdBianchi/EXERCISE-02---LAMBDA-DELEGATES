@@ -7,9 +7,9 @@ namespace EXERCISE_02___LAMBDA_DELEGATES {
             double a = 10;
             double b = 12;
 
-            BinaryNumericOperation op = CalculationService.Max;
+            BinaryNumericOperation op = new BinaryNumericOperation(CalculationService.Sum);
 
-            double result = op(a, b);
+            double result = op.Invoke(a, b);
             Console.WriteLine(result);
              
         }
